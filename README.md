@@ -1,1 +1,3 @@
 # movie-app
+
+The app will collect all the different movie and TV show titles from the top mainstream platforms like Netflix, Hulu, and Amazon Prime. When the user enters the title of the TV show or movie they wish to watch, the app will direct them to the streaming service(s) that specific title is available on. If the user has an account with that platform, they can easily watch their program. Otherwise, they will have to create an account with that specific platform before watching their program. The app will save the movies and TV shows that the user watched in a “watchlist” and make recommendations for other movies and TV shows for the user.
