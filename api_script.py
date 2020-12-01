@@ -1,11 +1,12 @@
-
-""" This is a script for adding an API in json format."""
 import requests
-import json
-from pprint import PrettyPrinter
-pp = PrettyPrinter() #beautify the JSON output
 
-jsonFile = requests.get("Place your API in here")
+url = "https://netflix-unofficial.p.rapidapi.com/api/search"
 
-jsonObject = json.loads(jsonFile.content)
-print(jsonObject["Title"])
+headers = {
+    'x-rapidapi-key': "979499eb08msh3664a876cdc17fcp17f3adjsnde10b912d78f",
+    'x-rapidapi-host': "netflix-unofficial.p.rapidapi.com"
+    }
+
+response = requests.request("GET", url, headers=headers)
+
+print(response.text)
