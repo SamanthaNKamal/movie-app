@@ -2,6 +2,9 @@ import sys
 import youtube_api
 
 class Entertainment():
+    """This function gives the user options for choosing a movie platform
+    where they would like to see a certain movie or tv show (Zarlashta Manan).
+    """
     
     def __init__(self):
         self.platform = None
