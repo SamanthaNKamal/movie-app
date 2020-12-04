@@ -3,7 +3,7 @@ import requests
 import json
 
 def youtube():
-    """This method will search the youtube API for the title of the movie or tv show.
+    """This method will search the youtube API for the title of the movie or tv show (Zarlashta Manan).
     
     Returns:
         The title of the movie or the tv show.
