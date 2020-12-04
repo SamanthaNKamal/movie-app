@@ -1,17 +1,17 @@
-import requests
 
-#Youtube API
+import requests
+import json
+
 result = input("Enter in the Movie Title or TV Show:")
-url = "https://youtube-search3.p.rapidapi.com/get_keywords_video/v1"
-payload = f"region=us&keywords=%5B%22s{result}_the_movie%202%22%5D&language=en"
+url = "https://youtube-search1.p.rapidapi.com/" + result
+
 headers = {
-    'content-type': "application/x-www-form-urlencoded",
-    'x-rapidapi-key': "979499eb08msh3664a876cdc17fcp17f3adjsnde10b912d78f",
-    'x-rapidapi-host': "youtube-search3.p.rapidapi.com"
+    'x-rapidapi-key': "3d2fbbd54bmshbbccc15fd8196c7p11c1aejsn36237f19f62b",
+    'x-rapidapi-host': "youtube-search1.p.rapidapi.com"
     }
 
-response = requests.request("POST", url, data=payload, headers=headers)
+response = requests.request("GET", url, headers=headers)
+jsonResponse = response.json()
 
-print(response.text)
-
-
+for key, value in jsonResponse.items():
+    print(jsonResponse["items"][0]["title"])
