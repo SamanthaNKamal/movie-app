@@ -1,2 +1,2 @@
-# Entertainment-app
+# Movie-app
 
