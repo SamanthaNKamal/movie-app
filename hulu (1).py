@@ -1,26 +1,31 @@
 import requests
 import json
 
-from pprint import PrettyPrinter 
-pp = PrettyPrinter() 
+def  Hulu():
+     """This method will search the Hulu API for the title of the movie or tv show (Simrat Kaur).
+    
+    Returns:
+        The title of the movie or the tv show.
+    """
 
+    result = input("Enter in the Movie Title or TV Show:")
+    url = "https://hulu1.p.rapidapi.com/search" + result
 
-jsonFile = requests.get(
+    querystring = {"type":"Movie","page":"1","title":"batman"}
 
-url = "https://hulu1.p.rapidapi.com/new"
+    headers = {
+        'x-rapidapi-key': "b08ebf0eb1msh1a42bdbfe0d3d70p138554jsn9e81d1deb388",
+        'x-rapidapi-host': "hulu1.p.rapidapi.com"
+        }
 
-querystring = {"Type":"Movie","days":"20","page":"1"}
+    response = requests.request("GET", url, headers=headers, params=querystring)
+    
+    print(response.text)
+    
+    jsonResponse = response.json()
 
-headers = {
-    'x-rapidapi-key': "SIGN-UP-FOR-KEY",
-    'x-rapidapi-host': "hulu1.p.rapidapi.com"
-    }
+    for key, value in jsonResponse.items():
+        print(jsonResponse["items"][0]["title"])
 
-response = requests.request("GET", url, headers=headers, params=querystring)
-)
-
-print(response.text)
-
-jsonObject = json.loads(jsonFile.content)
-
-print(jsonObject["Batman"])
+if __name__ == "__main__":
+    Hulu()
