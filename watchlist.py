@@ -4,19 +4,19 @@ import time
 class watch_list():
 
     def watchlist(self, moviename, platform, session):
-        """
+    """
         Creates a dictonary of the movies and 
         TV shows user watched and make recommendations for other movies and TV shows
         for the user
 
-        Args:
+    Args:
         self
         moviename: The movie title
         platform: The platform it is streaming on
 
-        Return:
+    Return:
         A dictonary of the movie and TV shows for the users
-        """
+    """
         watchlist = client.get_watchlist_request()
         contents = []
         for list_ in watchlist:
