@@ -5,7 +5,7 @@ def  Hulu():
      """This method will search the Hulu API for the title of the movie or tv show (Simrat Kaur).
     
     Returns:
-        The title of the movie or the tv show.
+        The title of the movie or the tv shows.
     """
 
     result = input("Enter in the Movie Title or TV Show:")
