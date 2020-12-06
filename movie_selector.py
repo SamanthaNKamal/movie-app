@@ -11,8 +11,8 @@ class Entertainment():
     def __init__(self):
         self.platform = None
 
-    def lookup_all(self):
-        result = input("Enter in the Movie Title or TV Show:")
+    #def lookup_all(self):
+    #    result = input("Enter in the Movie Title or TV Show:")
 
     def lookup_amazon(self):
         result = input("Enter in the Movie Title or TV Show:")
@@ -71,7 +71,9 @@ class Entertainment():
             elif choice==4:
                 print("All has been selected")
                 self.platform = "All"
-                self.lookup_all()
+                self.lookup_hulu()
+                self.lookup_amazon()
+                self.lookup_youtube()
         
             elif choice==5:
                 print("Menu 5 has been selected")
@@ -79,6 +81,9 @@ class Entertainment():
             else:
             # Any integer inputs other than values 1-5 we print an error message
                 print("Wrong option selection. Enter any key to try again..")
+                
+main():
+    
   
 
 if __name__ == "__main__":
